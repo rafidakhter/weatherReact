@@ -16,7 +16,7 @@ class WeatherEninge extends Component {
   constructor() {
     super();
     this.state = {
-      location: "Dhaka",
+      location: "Ottawa",
       loading: false,
       error: false,
       query: "",
@@ -59,7 +59,7 @@ class WeatherEninge extends Component {
     this.setLoading(true);
     try {
       const apiRes = await fetch(
-        `http://api.openweathermap.org/data/2.5/weather?q=${q}&units=metric&appid=228bc45340cf8dbd8c0d676703f6892b`
+        `https://api.openweathermap.org/data/2.5/weather?q=${q}&units=metric&appid=228bc45340cf8dbd8c0d676703f6892b`
       );
       const resJSON = await apiRes.json();
       this.setWeather({
